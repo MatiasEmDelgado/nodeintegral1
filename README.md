@@ -1,0 +1,1 @@
+El repo muestra de ejemplo una resolucion practica de como se aplican los conceptos gradualmente.
