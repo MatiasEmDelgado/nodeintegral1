@@ -2,7 +2,7 @@ const fs = require("fs")
 
 class ProductManager {
 
-    constructor(path="../src/data/products.json"){
+    constructor(path="./C1/src/data/products.json"){
         this.path=path
     }
 
@@ -25,8 +25,7 @@ class ProductManager {
             if(product){
                 return product
             } else {
-                //throw new Error(`Product ${id} doesnt exist`)
-                return []
+                throw new Error(`Product ${id} doesnt exist`)
             }
         } catch(error) {
             console.log(error)
