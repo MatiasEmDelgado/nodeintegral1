@@ -30,4 +30,15 @@ router.get("/:id", async (req, res)=>{
     }
 })
 
+router.post("/", async(req,res)=>{
+    try {
+        let {title, description, code, price, status, stock, category, thumbnails} = req.body
+        let newProduct = await productManager.addProduct({title, description, code, price, status, stock, category, thumbnails})
+        res.send(newProduct)
+
+    } catch (error) {
+        res.send({error: "internal server error"})
+    }
+})
+
 module.exports={router}

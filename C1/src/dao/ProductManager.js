@@ -33,7 +33,32 @@ class ProductManager {
 
     }
 
+    async addProduct(product={}){
+        let products = await this.getProducts()
+        let {title, description, code, price, status, stock, category, thumbnails} = product
+        let id=products[products.length-1].id+1
+        let newProduct = {id, title, description, code, price, status, stock, category, thumbnails}
+        products.push(newProduct)
+        await fs.promises.writeFile(this.path, JSON.stringify(products,null, 5))
+        return newProduct
+    }
+
 }
+
+/* const prod = new ProductManager();
+
+(async () => {
+    prod.addProduct({
+    "title": "lechita",
+    "description": "rica",
+    "code": "LIM-010",
+    "price": 140.00,
+    "status": true,
+    "stock": 18,
+    "category": "alimento",
+    "thumbnails": ["vacio"]
+  })
+})(); */
 
 module.exports={
     ProductManager

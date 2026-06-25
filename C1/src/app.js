@@ -6,7 +6,7 @@ const app=express()
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-app.use("/products", productRouter)
+app.use("/api/products", productRouter)
 
 app.listen(PORT, ()=>{
     console.log(`Server listening on port ${PORT}` )
