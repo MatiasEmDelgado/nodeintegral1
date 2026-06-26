@@ -19,14 +19,24 @@ router.get("/", async (req, res)=>{
     }
 })
 
-router.get("/:id", async (req, res)=>{
+router.get("/:pid", async (req, res)=>{
     try {
-        let {id} = req.params
-        let product = await productManager.getProduct(id)
+        let {pid} = req.params
+        let product = await productManager.getProduct(pid)
         let {limit}=req.query
         res.send(product)
     } catch (error) {
         res.send({error: "internal server error"})
+    }
+})
+
+router.delete("/:pid", async (req, res)=>{
+    try {
+        let {pid} = req.params
+        let product = await productManager.removeProduct(pid)
+        res.send(product)
+    } catch (error) {
+        res.send({error: "internal server error delete"})
     }
 })
 

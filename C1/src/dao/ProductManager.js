@@ -32,7 +32,7 @@ class ProductManager {
         }
 
     }
-
+    
     async addProduct(product={}){
         let products = await this.getProducts()
         let {title, description, code, price, status, stock, category, thumbnails} = product
@@ -43,7 +43,28 @@ class ProductManager {
         return newProduct
     }
 
+    async removeProduct(id){
+        const products = await this.getProducts()
+        const deletedProduct = products.find(prod=>prod.id==id)
+        const index = products.findIndex(prod => prod.id == id);
+
+        if(deletedProduct){
+            products.splice(index, 1)
+            await fs.promises.writeFile(this.path, JSON.stringify(products,null, 5))
+        } else {
+            throw new Error(`Cannot delete, product ${id} doesnt exist`)
+        }
+        return deletedProduct
+    }
 }
+
+/*( async () => {
+  const prod = new ProductManager();
+  
+  // Agrega 'await' aquí para que el script espere la ejecución del método
+  const resultado = await prod.removeProduct(12); 
+ // console.log("Resultado final:", resultado);
+})(); */
 
 /* const prod = new ProductManager();
 
