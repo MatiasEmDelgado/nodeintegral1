@@ -15,7 +15,7 @@ router.get("/", async (req, res)=>{
         }
         res.send(products)
     } catch (error) {
-        res.send({error: "internal server error"})
+        res.send({error: "internal server error get all"})
     }
 })
 
@@ -26,7 +26,7 @@ router.get("/:pid", async (req, res)=>{
         let {limit}=req.query
         res.send(product)
     } catch (error) {
-        res.send({error: "internal server error"})
+        res.send({error: "internal server error get id"})
     }
 })
 
@@ -58,7 +58,7 @@ router.post("/", async(req,res)=>{
         res.send(newProduct)
 
     } catch (error) {
-        res.send({error: "internal server error"})
+        res.send({error: "internal server error add"})
     }
 })
 

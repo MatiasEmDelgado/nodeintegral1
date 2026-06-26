@@ -20,8 +20,8 @@ class ProductManager {
 
     async getProduct(id){
         try {
-            let products = await this.getProducts()
-            let product = products.find(prod=>prod.id==id)
+            const products = await this.getProducts()
+            const product = products.find(prod=>prod.id==id)
             if(product){
                 return product
             } else {
@@ -34,10 +34,10 @@ class ProductManager {
     }
     
     async addProduct(product={}){
-        let products = await this.getProducts()
-        let {title, description, code, price, status, stock, category, thumbnails} = product
-        let id=products[products.length-1].id+1
-        let newProduct = {id, title, description, code, price, status, stock, category, thumbnails}
+        const products = await this.getProducts()
+        const {title, description, code, price, status, stock, category, thumbnails} = product
+        const id=products[products.length-1].id+1
+        const newProduct = {id, title, description, code, price, status, stock, category, thumbnails}
         products.push(newProduct)
         await fs.promises.writeFile(this.path, JSON.stringify(products,null, 5))
         return newProduct
