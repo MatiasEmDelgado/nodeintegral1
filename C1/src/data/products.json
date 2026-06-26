@@ -144,8 +144,8 @@
      },
      {
           "id": 12,
-          "title": "baratija",
-          "description": "solo pa proba",
+          "title": "otra baratija",
+          "description": "solo pa proba update",
           "code": "LIM-010",
           "price": 140,
           "status": true,

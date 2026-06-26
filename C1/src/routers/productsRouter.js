@@ -40,6 +40,17 @@ router.delete("/:pid", async (req, res)=>{
     }
 })
 
+router.put("/:pid", async (req, res)=>{
+    try {
+        let {pid} = req.params
+        let {title, description, code, price, status, stock, category, thumbnails} = req.body
+        let updatedProduct = await productManager.updateProduct(pid,{title, description, code, price, status, stock, category, thumbnails})
+        res.send(updatedProduct)
+    } catch (error) {
+        res.send({error: "internal server error update"})
+    }
+})
+
 router.post("/", async(req,res)=>{
     try {
         let {title, description, code, price, status, stock, category, thumbnails} = req.body
