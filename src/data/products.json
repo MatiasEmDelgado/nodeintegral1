@@ -1,0 +1,158 @@
+[
+     {
+          "id": 1,
+          "title": "Jabón",
+          "description": "Muy limpio",
+          "code": "LIM-001",
+          "price": 150,
+          "status": true,
+          "stock": 2,
+          "category": "Limpieza",
+          "thumbnails": [
+               "vacio"
+          ]
+     },
+     {
+          "id": 2,
+          "title": "Carbón",
+          "description": "muy sucio",
+          "code": "LIM-002",
+          "price": 450,
+          "status": true,
+          "stock": 15,
+          "category": "Limpieza",
+          "thumbnails": [
+               "vacio"
+          ]
+     },
+     {
+          "id": 3,
+          "title": "Esponja",
+          "description": "Fibra antirrayas",
+          "code": "LIM-003",
+          "price": 90,
+          "status": true,
+          "stock": 8,
+          "category": "Limpieza",
+          "thumbnails": [
+               "vacio"
+          ]
+     },
+     {
+          "id": 4,
+          "title": "Desinfectante",
+          "description": "Aroma a pino fresco",
+          "code": "LIM-004",
+          "price": 320,
+          "status": true,
+          "stock": 20,
+          "category": "Limpieza",
+          "thumbnails": [
+               "vacio"
+          ]
+     },
+     {
+          "id": 5,
+          "title": "Suavizante",
+          "description": "Ropa suave por más tiempo",
+          "code": "LIM-005",
+          "price": 580,
+          "status": true,
+          "stock": 5,
+          "category": "Limpieza",
+          "thumbnails": [
+               "vacio"
+          ]
+     },
+     {
+          "id": 6,
+          "title": "Detergente Líquido",
+          "description": "Ultra desengrasante para vajilla",
+          "code": "LIM-006",
+          "price": 280,
+          "status": true,
+          "stock": 12,
+          "category": "Limpieza",
+          "thumbnails": [
+               "vacio"
+          ]
+     },
+     {
+          "id": 7,
+          "title": "Limpiavidrios",
+          "description": "Brillo transparente sin vetas",
+          "code": "LIM-007",
+          "price": 210,
+          "status": true,
+          "stock": 0,
+          "category": "Limpieza",
+          "thumbnails": [
+               "vacio"
+          ]
+     },
+     {
+          "id": 8,
+          "title": "Guantes de Látex",
+          "description": "Protección para tareas del hogar",
+          "code": "LIM-008",
+          "price": 190,
+          "status": true,
+          "stock": 25,
+          "category": "Limpieza",
+          "thumbnails": [
+               "vacio"
+          ]
+     },
+     {
+          "id": 9,
+          "title": "Bolsas de Consorcio",
+          "description": "Alta resistencia 80x110cm",
+          "code": "LIM-009",
+          "price": 350,
+          "status": true,
+          "stock": 40,
+          "category": "Limpieza",
+          "thumbnails": [
+               "vacio"
+          ]
+     },
+     {
+          "id": 10,
+          "title": "Paño Microfibra",
+          "description": "Atrapa el polvo sin rayar",
+          "code": "LIM-010",
+          "price": 140,
+          "status": true,
+          "stock": 18,
+          "category": "Limpieza",
+          "thumbnails": [
+               "vacio"
+          ]
+     },
+     {
+          "id": 11,
+          "title": "lechita",
+          "description": "rica",
+          "code": "LIM-010",
+          "price": 140,
+          "status": true,
+          "stock": 18,
+          "category": "alimento",
+          "thumbnails": [
+               "vacio"
+          ]
+     },
+     {
+          "id": 12,
+          "title": "otra baratija",
+          "description": "solo pa proba",
+          "code": "LIM-010",
+          "price": 140,
+          "status": true,
+          "stock": 180,
+          "category": "ninguna",
+          "thumbnails": [
+               "vacio"
+          ]
+     }
+]
