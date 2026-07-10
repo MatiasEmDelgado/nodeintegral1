@@ -2,11 +2,13 @@ const fs = require("fs")
 
 class ProductManager {
 
-    constructor(path="./C1/src/data/products.json"){
+    constructor(path="../src/data/products.json"){
+        //C:\Users\Matu\Desktop\cursos\node\nodeintegral1\src\data\products.json
         this.path=path
     }
 
     async getProducts(){
+        console.log("hola")
         try {
             if(fs.existsSync(this.path)){
                 return JSON.parse(await fs.promises.readFile(this.path, "utf-8"))
